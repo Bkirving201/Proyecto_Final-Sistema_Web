@@ -1,0 +1,36 @@
+body{
+
+    margin: 0;
+}
+#general{
+	display: flex;
+}
+
+#cuerpo{
+	background-color: #FFA100;
+	height: 650px;
+	width: 100%;
+}
+
+#navegacion{
+
+	float: left;
+	background-color: #182F53;
+	height: 650px;
+	width: 200px
+}
+#boton{
+	background-color: #182F53;
+	color: white;
+	margin-top:10px;
+	width: 200px;
+	height: 60px;
+}
+#navegacion-alineacion{
+	margin-top: 20px;
+}
+#img1{
+	height: 100px;
+	margin-left: 50px;
+	margin-bottom:20px;
+}
