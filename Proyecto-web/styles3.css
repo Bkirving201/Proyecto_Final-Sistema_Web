@@ -5,17 +5,16 @@ body{
 #general{
 	display: flex;
 }
-
 /*	Barra de navegacion*/
 
 #navegacion{
 
 	float: left;
 	background-color: #182F53;
-	height: 650px;
+	height: 654px;
 	width: 200px
 }
-#boton{
+#btn{
 	background-color: #182F53;
 	color: white;
 	margin-top:10px;
@@ -31,6 +30,10 @@ body{
 	margin-bottom:20px;
 }
 /* Cuerpo*/
+#titulo-fuente{
+	font-family: 'Cinzel', serif;
+
+}
 
 #cuerpo{
 	background-color: #FFA100;
@@ -47,6 +50,31 @@ body{
 	margin-top: 10px;
 }
 
+
+#alineacion-contenido-cuerpo{
+	background: transparent;
+	height: 400px;
+	width: 450px;
+	margin: auto;
+	text-align: center;
+}
+
+#registro-alineacion-cuerpo{
+	background: transparent;
+	width: 370px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+#btn-habitaciones{
+	background-color: #182F53;
+	margin-top: 30px;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+	font-family: ;
+}
 .animacion-btn {
 	border-color:  #FFA100;
 	color: black;
@@ -61,16 +89,25 @@ body{
 	background-position: 0;
 }
 
+
+#espaciado{
+	margin: 0px;
+	/*margin-top: 4px;*/
+	border: 2px solid gray;
+	border-radius: 36px;
+	padding: 10px;
+	font-size: 17px;
+}
+
 @media (min-width:1481px) {
 
-	#cuerpo {
+	#cuerpo{
 		background-color: #FFA100;
-		height: 969px;
+		height:  969px;
 		width: 100%;
 		overflow: scroll;
 	}
-
-	#navegacion {
+	#navegacion{
 
 		float: left;
 		background-color: #182F53;
@@ -78,11 +115,44 @@ body{
 		width: 200px
 	}
 
-	#contenido-cuerpo {
+	#contenido-cuerpo{
 		background-color: white;
 		height: 837px;
 		width: 850px;
 		margin: auto;
 		margin-top: 10px;
 	}
+	#btn-habitaciones{
+		background-color: #182F53;
+		margin-top: 60px;
+		padding: 10px;
+		color: white;
+		border-radius: 10px;
+		font-family: ;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
