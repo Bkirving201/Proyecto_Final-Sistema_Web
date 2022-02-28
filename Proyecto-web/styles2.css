@@ -7,7 +7,7 @@ body{
 }
 
 #cuerpo{
-	background-color: #FFA100; color amarillo
+	background-color: #FFA100;
 	height: 650px;
 	width: 100%;
 }
@@ -19,6 +19,9 @@ body{
 	height: 650px;
 	width: 200px
 }
+
+
+
 #boton{
 	background-color: #182F53;
 	color: white;
