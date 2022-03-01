@@ -61,6 +61,55 @@ body{
 	background-position: 0;
 }
 
+#alineacion-contenido-cuerpo{
+
+	width: 450px;
+	margin: auto;
+	text-align: center; /*Alenacion para los titulos*/
+	font-family: 'Cinzel', serif; /*Fuente para los titulos*/
+}
+#btn-habitaciones-oculto-habitaciones{
+	background-color: white;
+	height: 420px;
+	margin-top: 82px;
+	display: flex;
+	justify-content: space-around;
+}
+#alineacion-oculto-habitaciones{
+
+	background-color: white;
+	border: 2px solid gray;
+	border-radius: 29px;
+	margin: auto;
+	margin-top: 64px;
+	height: 364px;
+	width: 284px;
+}
+#alineacion-img{
+	display: flex;
+	justify-content: center;
+}
+#marco{
+
+	background-color: blue;
+	margin: auto;
+	height: 178px;
+	width: 243px;
+}
+#circulo{
+background-color: red;
+	height: 25px;
+	width: 25px;
+	border-radius: 100%;
+	margin: auto;
+	margin-top: 25px;
+}
+#btn-habitaciones{
+	width: -webkit-fill-available;
+}
+
+
+
 @media (min-width:1481px) {
 
 	#cuerpo {
