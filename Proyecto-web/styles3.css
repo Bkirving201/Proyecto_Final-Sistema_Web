@@ -92,7 +92,7 @@ body{
 }
 
 
-#espaciado{
+.espaciado{
 	margin: 0px;
 	/*margin-top: 4px;*/
 	border: 2px solid gray;
