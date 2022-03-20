@@ -21,8 +21,7 @@ body{
 	margin-top:10px;
 	width: 200px;
 	height: 60px;
-	font-family: inherit;
-	font-size: inherit;
+
 }
 #navegacion-alineacion{
 	margin-top: 20px;
@@ -31,22 +30,6 @@ body{
 	height: 100px;
 	margin-left: 50px;
 	margin-bottom:20px;
-}
-/* Cuerpo*/
-
-#cuerpo{
-	background-color: #FFA100;
-	height: 650px;
-	width: 100%;
-	overflow: scroll;
-}
-
-#contenido-cuerpo{
-	background-color: white;
-	height: 650px;
-	width: 850px;
-	margin: auto;
-	margin-top: 10px;
 }
 
 .animacion-btn {
@@ -62,6 +45,26 @@ body{
 .animacion-btn:hover {
 	background-position: 0;
 }
+
+
+/* Cuerpo*/
+
+#cuerpo{
+	background-color: #FFA100;
+	height: 650px;
+	width: 100%;
+	overflow: scroll;
+}
+
+#contenido-cuerpo{
+	background-color: white;
+	height: 650px;
+	width: 950px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+
 
 @media (min-width:1481px) {
 
@@ -83,7 +86,7 @@ body{
 	#contenido-cuerpo {
 		background-color: white;
 		height: 837px;
-		width: 850px;
+		width: 1040px;
 		margin: auto;
 		margin-top: 10px;
 	}

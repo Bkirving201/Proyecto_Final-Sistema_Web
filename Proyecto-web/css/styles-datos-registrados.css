@@ -21,6 +21,7 @@ body{
 	margin-top:10px;
 	width: 200px;
 	height: 60px;
+
 }
 #navegacion-alineacion{
 	margin-top: 20px;
@@ -44,6 +45,8 @@ body{
 .animacion-btn:hover {
 	background-position: 0;
 }
+
+
 /* Cuerpo*/
 
 #cuerpo{
@@ -60,27 +63,36 @@ body{
 	margin: auto;
 	margin-top: 10px;
 }
-#hbt{
-	border: 2px solid #e2e2e2;
-	margin-top: 60px;
-	margin-left: 44px;
-	margin-bottom: 20px;
-	padding-bottom: 80px;
-}
-.tarjetas{
-	display: flex;
-	justify-content: center;
-}
-#contenido-tarjetas{
-	text-align: center;
+#titulo{
+	font-weight: normal;
+	margin-left:30px;
+	margin-right:30px;
+	margin-bottom:13px;
 }
 
-#btn-tarjetas{
-	margin-left: 44px;
-	padding: 14px 59px 14px 59px;
-	background-color: #182F53;
-	color: white;
+#tabla{
+
+	flex-direction: column;
+    margin-left: 29px;
+	margin-right: 23px;
+    justify-content: center;
 }
+.encabezado{
+	 
+	color: white;
+	background-color: #2d4e83;
+}
+table,tr,th{
+	
+	border: 2px solid;
+	 text-align: center;
+	 font-weight: normal;
+ }
+ th{
+	 padding-left: 18px;
+	 padding-right: 18px;
+ 
+  }
 
 @media (min-width:1481px) {
 

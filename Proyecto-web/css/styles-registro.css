@@ -1,6 +1,5 @@
 body{
 	    margin: 0;
-	font-family: ;
 }
 #general{
 	display: flex;
@@ -29,6 +28,21 @@ body{
 	margin-left: 50px;
 	margin-bottom:20px;
 }
+
+.animacion-btn { /*Animacion para todos los botones*/
+	border-color:  #FFA100;
+	color: black;
+	background-image: -webkit-linear-gradient(45deg,  #FFA100 50%, transparent 50%);
+	background-image: linear-gradient(45deg,  #FFA100 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	-webkit-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
+}
+.animacion-btn:hover { /*Animacion para todos los botones*/
+	background-position: 0;
+}
+
 /*============ Fin - Barra de navegacion ================*/
 
 
@@ -44,114 +58,66 @@ body{
 #contenido-cuerpo{
 	background-color: white;
 	/*height: 650px;*/
-	width: 850px;
+	width: 950px;
 	margin: auto;
 	margin-top: 10px;
 }
-
-
-#alineacion-contenido-cuerpo{
-	background: transparent;
-	height: auto;
-	width: 450px;
-	margin: auto;
-	text-align: center; /*Alenacion para los titulos*/
-	font-family: 'Cinzel', serif; /*Fuente para los titulos*/
+.registro-personal{
+	display: flex;
+	margin-left: 30px;
 }
 
-#registro-alineacion-cuerpo{
-	background: transparent;
-	width: 370px;
-	margin: auto;
-	display: flex;
+.registro{
+margin-right: 55px;
+}
+
+.input{
+	margin-top: 4px;
+	border: 2px solid #d3cccc;
+	border-radius: 9px;
+	padding: 5px;
+	font-size: 87%;	
+}
+table,tr,th{
+	
+   border: 2px solid;
+    text-align: center;
+	font-weight: normal;
+}
+th{
+    padding-left: 18px;
+    padding-right: 18px;
+
+ }
+ .encabezado{
+	 
+	 color: white;
+	 background-color: #2d4e83;
+ }
+
+#tabla{
+
 	flex-direction: column;
-	text-align: left;
+    margin-left: 29px;
+	margin-right: 23px;
+    justify-content: center;
+	
 }
-#btn-habitaciones{
-	background-color: #182F53;
-	margin-top: 30px;
-	padding: 15px;
-	color: white;
-	border-radius: 10px;
-}
-#btn-alineacion{
+#btn-informacion-tabla{
 	display: flex;
-	justify-content: space-around;
-	width: 420px;
-}
-.animacion-btn { /*Animacion para todos los botones*/
-	border-color:  #FFA100;
-	color: black;
-	background-image: -webkit-linear-gradient(45deg,  #FFA100 50%, transparent 50%);
-	background-image: linear-gradient(45deg,  #FFA100 50%, transparent 50%);
-	background-position: 100%;
-	background-size: 400%;
-	-webkit-transition: background 300ms ease-in-out;
-	transition: background 300ms ease-in-out;
-}
-.animacion-btn:hover { /*Animacion para todos los botones*/
-	background-position: 0;
+	font-weight:normal; 
+	margin-left:30px;
+	background-color:white; 
+	border:0px; 
+	padding:0px
 }
 
-#espaciado{
-	margin: 0px;
-	/*margin-top: 4px;*/
-	border: 2px solid gray;
-	border-radius: 36px;
-	padding: 10px;
-	font-size: 17px;
+#img-flecha{
+	
+	height: 29px;
+    margin-top: 12px;
+    margin-right: 12px;
 }
-/*============ Fin - Cuerpo Registro ================*/
-
-/*============ Inicio - Cuerpo Registro - Oculto ================
-
-#btn-habitaciones-oculto-habitaciones{
-	background-color: white;
-	height: 840px;
-	margin-top: 40px;
-	display: flex;
-}
-#alineacion-oculto-habitaciones{
-
-	background-color: white;
-	border: 2px solid gray;
-	border-radius: 29px;
-	margin: auto;
-	margin-top: 64px;
-	height: 364px;
-	width: 284px;
-}
-.sombra{
-
-	position:relative; = Sombreado 2
-	-webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
-	-moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
-	box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*============ Inicio - Cuerpo Registro - Oculto ================*/
 
 
@@ -174,7 +140,7 @@ body{
 	#contenido-cuerpo{
 		background-color: white;
 		height: 837px;
-		width: 850px;
+		width: 1040px;
 		margin: auto;
 		margin-top: 10px;
 		padding-bottom: 50px;

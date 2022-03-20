@@ -1,0 +1,15 @@
+table,tr,th{
+    border: 2px solid;
+    text-align: left;
+}
+th{
+    padding-left: 18px;
+    padding-right: 18px;
+ }
+#nombre{
+    padding-right: 110px;
+}
+.tabla{
+    
+    justify-content: center;
+}

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<?php $coneccion=mysqli_connect('localhost','root','','sistema_web');?>
 	<link rel="stylesheet" type="text/css" href="../css/styles-registro.css"> <!-- Conexion HTML con CSS -->
-<!--	<script src="Mostrar-ocultar-Habitaciones-Resgistr0.js"></script> --> <!--Conexion Js -->
+	<script src="../js/JavaScript.js"></script>  <!--Conexion Js -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- google fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- google fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> <!-- titulo fuente -->
@@ -22,72 +24,136 @@
 				<button class="animacion-btn" id="btn">Inicio</button> <!-- Btn-lateral-inicio-->
 			</a>
 
-			<a href="registro.php">
-				<button class="animacion-btn" id="btn">Registro</button> <!-- Btn-lateral-Regristo -->
+			<!--<a href="registro.php">
+				<button class="animacion-btn" id="btn">Registro</button> <!-- Btn-lateral-Regristo
 			</a>
-            <a href="habitaciones.php">
+			 -->
+			<a href="habitaciones.php">
 				<button class="animacion-btn" id="btn">Habitaciones</button> <!-- Btn-lateral-Habitaciones -->
             </a>
-                <button class="animacion-btn" id="btn">Datos registrados</button> <!-- Btn-lateral-Regristo -->
-			</div>
+			<a href="datos-registrados.php">
+				<button class="animacion-btn" id="btn">Datos registrados</button> <!-- Btn-lateral-Regristo -->
+			</a>
+		</div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
 
 		<!-- aqui comienza La estructura del cuerpo -->
 		<div id="cuerpo">
-			<div id="contenido-cuerpo" style="height:640px;"> <!--Cuadro branco -->
-				<div id="alineacion-contenido-cuerpo">
-					<br>
-					<h1 id="alineacion-contenido-cuerpo">Resgistro</h1>
-					<hr>
-					<div id="registro-alineacion-cuerpo"><!--alenacion de los cuadros del forms-->
-							<h3 id="titulo-cuerpo-registro">Nombre</h3>
-							<input type="Nombre" name="Nombre" id="espaciado">
-							<h3 id="titulo-cuerpo-registro">Apellido</h3>
-							<input type="Nombre" name="Apellido" id="espaciado">
-							<h3 id="titulo-cuerpo-registro">Telefono</h3>
-							<input type="Nombre" name="Telefono" id="espaciado">
-							<h3 id="titulo-cuerpo-registro">Correo</h3>
-							<input type="Nombre" name="Correio" id="espaciado">
+			<div id="contenido-cuerpo" style="height:1040px;"> <!--Cuadro branco -->
+			<h1 style="text-align: center;">Registro</h1>
+			<br>
+			<div class="contenedor-registro">
 
-						<div id="btn-alineacion">
-							<button class="animacion-btn" id="btn-habitaciones" onclick="alerta();">----- Guardar -----</button>
-							<a href="Prieva4.html"><button class="animacion-btn" id="btn-habitaciones" <!-- onclick="mostrarhabitacion();-->">--- Habitaciones ---</button></a>
-							<br>
-							<br>
+					<button id="btn-informacion-tabla" onclick="mostrar();">
+					<img src="../img/flecha.png" alt="" id="img-flecha" style="transform: rotate(0deg);">
+					<h2 style="font-weight:normal; margin-left:-3px; margin-right:30px; margin-bottom:13px;"> Informacion habitacion </h2>
+					</button>
+				
+			
+			<hr style="margin-left:30px; margin-right: 20px;">
+
+				<br>
+				<br>
+
+			<div id="tabla" style="	display: none;">
+
+				<table>
+					<tr id="espacio">
+						<th class="encabezado"> No. habitacion </th>
+						<th class="encabezado"> Tipo de habitacion </th>
+						<th class="encabezado"> tipo de cama </th>
+						<th class="encabezado"> Limite de personas </th>
+						<th class="encabezado"> Estado </th>
+						<th class="encabezado"> Precio por noche </th>
+						
+						
+					</tr>
+				 
+					<?php 
+												
+						
+							$sql= "SELECT *  FROM `habitaciones` WHERE `Tipo de habitación` = 'Sencilla'";
+						$result=mysqli_query($coneccion,$sql);
+						
+						while($mostrar=mysqli_fetch_array($result)){
+
+						
+					?>
+					<tr>
+						<th><?php echo $mostrar['No. habitación']?></th>
+						<th><?php echo $mostrar['Tipo de habitación']?></th>
+						<th><?php echo $mostrar['Tipo de cama']?></th>
+						<th><?php echo $mostrar['Limite de personas']?></th>
+						<th><?php echo $mostrar['Estado']?></th>
+						<th><?php echo $mostrar['Precio por noche']?></th>
+					</tr>
+					<?php
+					}
+					?>
+					
+				</table>
+
+
+
+					<!-- 
+					<div class="registro-personal">	
+						<div  class="registro">
+							No. Habitacion
+							<input type="text" name="Nombre" class="input" >
 						</div>
-
-                    </div>
-<!--
-				</div>
-				<div id="oculto-habitaciones" style="display: none">
-					<br>
-					<br>
-					<br>
-					<br>
-					<h1 id="alineacion-contenido-cuerpo">Habitaciones</h1>
-					<hr id="alineacion-contenido-cuerpo">
-
-					<div id="btn-habitaciones-oculto-habitaciones">
-
-						<div id="alineacion-oculto-habitaciones" class="sombra">
-							<div id="img"></div>
-							<div id="contenido-cuadro-habitaciones"></div>
+						<div  class="registro">
+							Tipo de habitacion
+							<input type="text" name="Nombre" class="input" value="." id="tipo-habitacion">
 						</div>
-						<div id="alineacion-oculto-habitaciones" class="sombra">
-
+						<div class="registro">
+							Limite de peronas
+							<input type="text" name="Nombre" class="input">
 						</div>
-
+						<div class="registro">
+							Precio por noche
+							<input type="text" name="Nombre" class="input">
+						</div>
 					</div>
-				</div>
-	-->
+					-->
+			</div>	
 
-			</div>
+
+					<br>
+					<h2 style="font-weight:normal; margin-left:30px">Registro personal</h2>
+					<hr style="margin-left:30px; margin-right: 20px;">
+					<br>
+					<br>
+					<div class="registro-personal">	
+						<div  class="registro">
+							Nombre
+							<input type="text" name="Nombre" class="input">
+						</div>
+						<div  class="registro">
+							Apellido
+							<input type="text" name="Nombre" class="input">
+						</div>
+						<div class="registro">
+							Numero de telefono
+							<input type="text" name="Nombre" class="input">
+						</div>
+						<div class="registro">
+							Correo
+							<input type="text" name="Nombre" class="input">
+						</div>
+				</div>
+					
+			
+
+			
+			
+
+		
 
 
 
 		</div>
 	</div>
-
+	
 </body>
 </html>
