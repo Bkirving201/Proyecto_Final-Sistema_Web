@@ -63,7 +63,7 @@
 						<img src="../img/bed2.png" width="230px" height="168px" alt="imagen-cama">
 						<h3 id="contenido-tarjetas">Habitaciones dobles</h3>
 						<h4 id="contenido-tarjetas" style="font-weight: normal;">Costo por noche $700</h4>
-						<a href="./registro.php">
+                        <a href="./registro.php">
 							<button class="animacion-btn" id="btn-tarjetas"> ver </button>
 						</a>
 					</div>
@@ -71,7 +71,7 @@
 						<img src="../img/bed2.png" width="230px" height="168px" alt="imagen-cama">
 						<h3 id="contenido-tarjetas">Habitaciones triples</h3>
 						<h4 id="contenido-tarjetas" style="font-weight: normal;">Costo por noche $700</h4>
-						<a href="./registro.php">
+                        <a href="./registro.php">
 							<button class="animacion-btn" id="btn-tarjetas"> ver </button>
 						</a>
 					</div>

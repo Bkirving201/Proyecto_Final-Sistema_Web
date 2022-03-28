@@ -4,7 +4,6 @@
 <head>
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
 	<link rel="stylesheet" type="text/css" href="..\css\styles.css"> <!-- Conexion HTML con CSS -->
 	<link rel="icon" href="img/img2">
 	<title>Sistema hotelero (beta 1)</title>
