@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2022 a las 08:57:56
+-- Tiempo de generación: 29-03-2022 a las 07:21:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -42,7 +42,8 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`idClientes`, `Nombre`, `Apellidos`, `Telefono`, `Identificacion`, `Correo`, `Fechadeingreso`) VALUES
-(1, 'Irving Noe', 'Ramirez', '7443366058', 'Credencial Electoral', 'irvingramirez772@gmail.com', '2022-03-27 22:47:06');
+(1, 'Irving Noe', 'Ramirez', '7443366058', 'Credencial Electoral', 'irvingramirez772@gmail.com', '2022-03-28 23:18:35'),
+(3, 'Jose Luis', 'Vargas', '7443355221', 'Visa', 'joseluis12@gmail.com', '2022-03-28 23:19:01');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `credito`

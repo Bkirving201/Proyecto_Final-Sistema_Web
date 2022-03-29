@@ -49,6 +49,12 @@ body{
 
 /* Cuerpo*/
 
+.search{
+	width: 150px;
+	height: 30px;
+	font-size: 45%;
+}
+
 .buttonsave{
 	width: 85px;
 	height: 37px;
