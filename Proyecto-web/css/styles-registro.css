@@ -79,16 +79,16 @@ margin-right: 55px;
 	font-size: 87%;	
 }
 table,tr,th{
-	
-   border: 2px solid;
-    text-align: center;
+
+
+	text-align: center;
 	font-weight: normal;
 }
 th{
-    padding-left: 18px;
-    padding-right: 18px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
 
- }
  .encabezado{
 	 
 	 color: white;
@@ -118,6 +118,48 @@ th{
     margin-top: 12px;
     margin-right: 12px;
 }
+
+.tittletables{
+	background: #2d4e83;
+	color: #d3cccc;
+	margin-left: 29px;
+	margin-right: 23px;
+}
+
+.tamañocelda{
+	width: 160px;
+}
+.disponibilidad{
+	background:#FF6868;
+}
+
+.alineacion{
+	float: right;
+}
+
+.buttonedit{
+	width: 85px;
+	height: 37px;
+	/* margin: 10px 0 10px 0; */
+	color: #ffffff;
+	font-weight: bold;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	outline: 0;
+	background-color: forestgreen;
+	align-content: center;
+}
+
+.buttonedit:hover{
+	background-color: #00C700;
+}
+
 /*============ Inicio - Cuerpo Registro - Oculto ================*/
 
 

@@ -27,16 +27,18 @@
 					<button class="animacion-btn" id="boton">Inicio</button>
 				</a>
 
-				<!--<a href="registro.php">
-				<button class="animacion-btn" id="boton">Registro</button> Btn-lateral-Regristo 
-			</a>
-			-->
 				<a href="habitaciones.php">
 					<button class="animacion-btn" id="boton">Habitaciones</button> <!-- Btn-lateral-Habitaciones -->
 				</a>
+
 				<a href="datos-registrados.php">
 					<button class="animacion-btn" id="boton">Datos registrados</button> <!-- Btn-lateral-Regristo -->
 				</a>
+
+                <a href="registro.php?pagina=1">
+                    <button class="animacion-btn" id="boton">Registro</button>
+                </a>
+
 			</div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
@@ -53,11 +55,10 @@
 				<br>
                 <h2 id="titulo"> Clientes </h2>
                 <hr style="margin-left: 30px; margin-right: 30px;">
-				<br>
 
                 <!-- Tabla de boostrap 5 -->
 
-                <table class="table caption-top">
+                <table class="table table-hover">
 
                     <thead>
                         <tr class="tittleback">
@@ -81,6 +82,7 @@
                         $resultado = mysqli_query($enlace,$consulta);
 
                         while ($mostrar=mysqli_fetch_array($resultado)){
+
 
                         ?>
 

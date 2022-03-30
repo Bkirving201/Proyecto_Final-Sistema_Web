@@ -30,16 +30,18 @@
 					<button class="animacion-btn" id="boton">Inicio</button>
 				</a>
 
-				<!-- <a href="registro.php">
-				<button class="animacion-btn" id="boton">Registro</button> <!-- Btn-lateral-Regristo 
-			</a>
-			-->
 				<a href="habitaciones.php">
 					<button class="animacion-btn" id="boton">Habitaciones</button> <!-- Btn-lateral-Habitaciones -->
 				</a>
 				<a href="datos-registrados.php">
 					<button class="animacion-btn" id="boton">Datos registrados</button> <!-- Btn-lateral-Regristo -->
 				</a>
+
+                <a href="registro.php?pagina=1">
+                    <button class="animacion-btn" id="boton">Registro</button>
+                </a>
+
+
 			</div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
@@ -55,15 +57,15 @@
 						<img src="../img/bed2.png" width="230px" height="168px" alt="imagen-cama">
 						<h3 id="contenido-tarjetas">Habitaciones sencillas</h3>
 						<h4 id="contenido-tarjetas" style="font-weight: normal;">Costo por noche $700</h4>
-						<a href="./registro.php">
-							<button class="animacion-btn" id="btn-tarjetas" method="post" action="./registro.php" name="hbt-s"> ver </button>
+						<a href="./registro.php?pagina=1">
+							<button class="animacion-btn" id="btn-tarjetas" method="post" action="./registro.php?pagina=1" name="hbt-s"> ver </button>
 						</a>
 					</div>
 					<div id="hbt">
 						<img src="../img/bed2.png" width="230px" height="168px" alt="imagen-cama">
 						<h3 id="contenido-tarjetas">Habitaciones dobles</h3>
 						<h4 id="contenido-tarjetas" style="font-weight: normal;">Costo por noche $700</h4>
-                        <a href="./registro.php">
+                        <a href="./registro.php?pagina=1">
 							<button class="animacion-btn" id="btn-tarjetas"> ver </button>
 						</a>
 					</div>
@@ -71,7 +73,7 @@
 						<img src="../img/bed2.png" width="230px" height="168px" alt="imagen-cama">
 						<h3 id="contenido-tarjetas">Habitaciones triples</h3>
 						<h4 id="contenido-tarjetas" style="font-weight: normal;">Costo por noche $700</h4>
-                        <a href="./registro.php">
+                        <a href="./registro.php?pagina=1">
 							<button class="animacion-btn" id="btn-tarjetas"> ver </button>
 						</a>
 					</div>

@@ -48,6 +48,7 @@
                                 <input type="text" class="form-control" name="identificacion" value="<?php echo $mostrar['Identificacion'];?>" required="true">
                             </div>
                         </div>
+                    <br>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-03-2022 a las 07:21:08
+-- Tiempo de generación: 30-03-2022 a las 06:18:35
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -42,7 +42,6 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`idClientes`, `Nombre`, `Apellidos`, `Telefono`, `Identificacion`, `Correo`, `Fechadeingreso`) VALUES
-(1, 'Irving Noe', 'Ramirez', '7443366058', 'Credencial Electoral', 'irvingramirez772@gmail.com', '2022-03-28 23:18:35'),
 (3, 'Jose Luis', 'Vargas', '7443355221', 'Visa', 'joseluis12@gmail.com', '2022-03-28 23:19:01');
 
 -- --------------------------------------------------------
@@ -109,8 +108,20 @@ CREATE TABLE `habitacion` (
   `NombreHab` varchar(45) NOT NULL,
   `Descripcion` varchar(50) NOT NULL,
   `Precio` int(10) NOT NULL,
-  `Piso` int(10) NOT NULL
+  `Piso` int(10) NOT NULL,
+  `Estado` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `habitacion`
+--
+
+INSERT INTO `habitacion` (`idHabitacion`, `NombreHab`, `Descripcion`, `Precio`, `Piso`, `Estado`) VALUES
+(1, 'Habitacion Chica', 'Cama individual, baño, sala tamaño de 18 m2', 900, 3, 'Disponible'),
+(2, 'Habitacion Suite', 'Cama Queen Size, Jacuzzi, Gym incorporado,Comedor', 2500, 7, 'Ocupada'),
+(3, 'Habitacion Grande', 'Cama Matrimonial, Baño, television, aire, terraza', 1300, 1, 'Disponible'),
+(4, 'Habitacion Grande', 'Cama doble,Baño,Comedor,Armario pequeño', 1400, 3, 'Disponible'),
+(5, 'Habitacion Mediana', 'Cama Individual,Armario pequeño,terraza,baño,sala,', 900, 2, 'Disponible');
 
 -- --------------------------------------------------------
 
@@ -217,7 +228,7 @@ ALTER TABLE `formapago`
 -- AUTO_INCREMENT de la tabla `habitacion`
 --
 ALTER TABLE `habitacion`
-  MODIFY `idHabitacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idHabitacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
