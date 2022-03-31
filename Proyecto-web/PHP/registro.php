@@ -42,7 +42,7 @@
 
 		<!-- aqui comienza La estructura del cuerpo -->
 		<div id="cuerpo">
-			<div id="contenido-cuerpo" style="height:1040px;">
+			<div id="contenido-cuerpo">
 				<!--Cuadro branco -->
 
                 <h2 style="text-align: center;"> Habitaciones </h2>
@@ -56,7 +56,7 @@
 
                 <!-- Tabla para mostrar los datos en referencia a la base y las habitaciones -->
 
-                        <table class="table table-hover">
+                        <table class="table table-hover" id="alineacion-tabla">
                             <thead>
                             <tr class="tittletables">
                                 <th class="tamañocelda" scope="col">Habitación</th>
@@ -124,8 +124,8 @@
 
                         <!-- Aqui comienza la paginación para la tabla -->
 
-                        <nav class="alineacion" aria-label="Page navigation example" >
-                            <ul class="pagination">
+                        <nav class="alineacion" aria-label="Page navigation example">
+                            <ul class="pagination" >
 
 
                                 <li class="page-item <?php echo $_GET['pagina']<= 1 ? 'disabled':'' ?>">

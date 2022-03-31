@@ -57,8 +57,7 @@
                 <hr style="margin-left: 30px; margin-right: 30px;">
 
                 <!-- Tabla de boostrap 5 -->
-
-                <table class="table table-hover">
+                <table class="table table-hover" id="alineacion-tabla">
 
                     <thead>
                         <tr class="tittleback">
@@ -121,7 +120,17 @@
                         <!-- Aqui acaba -->
                     </tbody>
                 </table>
-
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
 		</div>
 	</div>
 

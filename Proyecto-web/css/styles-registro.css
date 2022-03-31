@@ -10,7 +10,7 @@ body{
 
 	float: left;
 	background-color: #182F53;
-	height: 654px;
+	height: 629px;
 	width: 200px
 }
 #btn{
@@ -50,17 +50,21 @@ body{
 
 #cuerpo{
 	background-color: #FFA100;
-	height: 650px;
+	height: 628px;
 	width: 100%;
 	overflow: scroll;
 }
 
 #contenido-cuerpo{
 	background-color: white;
-	/*height: 650px;*/
-	width: 950px;
+	height: 601px;
+	width: 1065px;
 	margin: auto;
 	margin-top: 10px;
+}
+#alineacion-tabla{
+	width: 1024px;
+	margin-left: 20px;
 }
 .registro-personal{
 	display: flex;
@@ -111,7 +115,10 @@ th{
 	border:0px; 
 	padding:0px
 }
-
+#alineacion-tabla{
+	width: 1024px;
+	margin-left: 20px;
+}
 #img-flecha{
 	
 	height: 29px;
@@ -135,6 +142,7 @@ th{
 
 .alineacion{
 	float: right;
+	margin-right: 23px;
 }
 
 .buttonedit{
@@ -178,7 +186,10 @@ th{
 		height: 969px;
 		width: 200px
 	}
-
+	#alineacion-tabla{
+		width: 998px;
+		margin-left: 20px;
+	}
 	#contenido-cuerpo{
 		background-color: white;
 		height: 837px;

@@ -1,6 +1,15 @@
 
 body{
     margin: 0;
+	font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+
 }
 #general{
 	display: flex;
@@ -12,7 +21,7 @@ body{
 
 	float: left;
 	background-color: #182F53;
-	height: 650px;
+	height: 629px;
 	width: 200px
 }
 #boton{
@@ -21,6 +30,9 @@ body{
 	margin-top:10px;
 	width: 200px;
 	height: 60px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: inherit;
 
 }
 #navegacion-alineacion{
@@ -29,7 +41,7 @@ body{
 #img2{
 	height: 100px;
 	margin-left: 50px;
-	margin-bottom:20px;
+	margin-bottom:14px;
 }
 
 .animacion-btn {
@@ -51,88 +63,45 @@ body{
 
 #cuerpo{
 	background-color: #FFA100;
-	height: 650px;
+	height: 628px;
 	width: 100%;
 	overflow: scroll;
 }
 
 #contenido-cuerpo{
 	background-color: white;
-	height: 650px;
-	width: 950px;
+	height: 601px;
+	width: 1065px;
 	margin: auto;
 	margin-top: 10px;
 	padding-top: 30px;
 }
 
-/*galeria img*/
-.carousel .carousel-item{
+.grid{
+	margin-left: 20px;
+	margin-right: 53px;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto;
+	gap:79px;
+	column-gap: 12px;
+}
+.grid div{
+	
+	text-align: center;
+	color: #fff;
+	background-color: #4ea93b;
+	height: 100px;
+	border-radius: 2%;
+}
+
+.no-habitacion{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
-	width: 500px;
-	height: 400px;
 }
-
-.carousel{
-	min-height: 500px;
-	margin-top: 5%;
+#estilos{
+	height: 100px;
 }
-
-.carousel .carousel-item img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	border-radius: 15px;
-}
-
-.sub-titulo{
-	color: black;
-	background-color: orange;
-	opacity: 60%;
-}
-
-/*Titulo animado*/
-.titulo-animado{
-	height: 50px;
-	font-size: 50px;
-	line-height: 50px;
-	text-align: center;
-	overflow: hidden;
-}
-
-ul{
-	list-style: none;
-	animation: cambiar 8s infinite;
-}
-
-@keyframes cambiar{
-	0%{margin-top: 0;}
-	20% {margin-top: 0;}
-
-	25% {margin-top: -50px;}
-	50% {margin-top:-50px ;}
-
-	55% {margin-top: -100px;}
-	80% { margin-top: -100px;}
-
-	85% { margin-top: -50px;}
-	95% { margin-top: -50px;}
-
-	100% { margin-top: 0;}
-}
-
-.pie{
-	text-align: center;
-	margin-top: 150px;
-}
-
 @media (min-width:1481px) {
 
 	#cuerpo {

@@ -12,7 +12,7 @@ body{
 
 	float: left;
 	background-color: #182F53;
-	height: 650px;
+	height: 629px;
 	width: 200px
 }
 #boton{
@@ -130,15 +130,15 @@ body{
 
 #cuerpo{
 	background-color: #FFA100;
-	height: 650px;
+	height: 628px;
 	width: 100%;
 	overflow: scroll;
 }
 
 #contenido-cuerpo{
 	background-color: white;
-	height: 650px;
-	width: 950px;
+	height: 601px;
+	width: 1065px;
 	margin: auto;
 	margin-top: 10px;
 }
@@ -155,7 +155,10 @@ body{
 	margin-left: 29px;
 	margin-right: 23px;
 }
-
+#alineacion-tabla{
+width: 1024px;
+margin-left: 20px;
+}
 #tabla{
 
 	flex-direction: column;
@@ -195,6 +198,10 @@ table,tr,th{
 		background-color: #182F53;
 		height: 969px;
 		width: 200px
+	}
+	#alineacion-tabla{
+		width: 998px;
+		margin-left: 20px;
 	}
 
 	#contenido-cuerpo {
