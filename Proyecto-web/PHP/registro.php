@@ -46,7 +46,6 @@
 				<!--Cuadro branco -->
 
                 <h2 style="text-align: center;"> Habitaciones </h2>
-                <br>
 
                 <?php
                 if(!$_GET){
@@ -74,7 +73,6 @@
                             <?php $cont = include ("conexion.php");
                             $consulta="SELECT * FROM habitacion";
                             $resultado = mysqli_query($enlace,$consulta);   //Primera sentencia para definir la parte inferior
-
 
 
                             $articulos_por_pagina=3;    //Defino que cantidad de resultados quiero ver
@@ -138,6 +136,7 @@
 
                                 </li>
 
+
                                 <!-- For para mostrar el numero de paginas necsarias -->
 
                                 <?php for($i=0;$i<$paginas;$i++): ?>
@@ -165,7 +164,68 @@
 
                         </nav>
 
+                <h1> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
+                        Guardar
+                    </button></h1>
+
                 <!-- aqui acaba la paginacion de la pagina para mostrar los datos por cantidad -->
+
+                <!-- Consultas para los datos de reservas -->
+
+                <?php
+                include ("conexion.php");
+                $consulta_2 = "SELECT * FROM reservas";
+                $resultado_2 = mysqli_query($enlace,$consulta_2);
+
+                while ($mostrar_1=mysqli_fetch_array($resultado_2));{
+
+
+                ?>
+
+
+                <!-- Aqui comienza la tabla de reservas para con los registros -->
+
+                <table class="table table-hover" id="alineacion-tabla">
+                    <thead>
+                    <tr class="tittletables">
+
+                        <th scope="col">Nombre del cliente</th>
+                        <th scope="col">Num. habitación</th>
+                        <th scope="col">Tipo Hab.</th>
+                        <th scope="col">Piso</th>
+                        <th scope="col">Forma de pago</th>
+                        <th scope="col">Fecha de reserva</th>
+                        <th scope="col">Acciones</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td>
+                                <button>Editar</button>
+                                <button>Borrar</button>
+                            </td>
+
+                        </tr>
+
+                    <?php
+                    include ("modal_save.php");
+                    }
+                    ?>
+
+                    </tbody>
+                </table>
+
+
+
+
+
             </div>
 
         </div>

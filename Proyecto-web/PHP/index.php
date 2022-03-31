@@ -39,82 +39,31 @@
                 <a href="registro.php">
                     <button class="animacion-btn" id="boton">Registro</button>
                 </a>
-
-			</div>
+            </div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
 
+        <?php
+        include ("conexion.php");
+        $consulta="SELECT * FROM habitacion";
+        $resultados=mysqli_query($enlace,$consulta);
+
+        while ($mostrar=mysqli_fetch_array($resultados)); {
+
+        ?>
+
 		<div id="cuerpo">
 			<div id="contenido-cuerpo">
-			<div class="grid">
-				<div>
-					Ocupado
-					<hr>
-					<div class="no-habitacion">
-						<div>
-							101
-						</div>
-						<div>
-							<img src="../img/cama.png" alt="" id="estilos">
-						</div>
-					</div>
-										
-				</div>
-				<div>
-					Ocupado
-					<hr>
-					<div class="no-habitacion">
-						<div>
-							101
-						</div>
-						<div>
-							<img src="../img/cama.png" alt="" id="estilos">
-						</div>
-					</div>
-										
-				</div>
-				<div>
-					Ocupado
-					<hr>
-					<div class="no-habitacion">
-						<div>
-							101
-						</div>
-						<div>
-							<img src="../img/cama.png" alt="" id="estilos">
-						</div>
-					</div>
-										
-				</div>
-				<div>
-					Ocupado
-					<hr>
-					<div class="no-habitacion">
-						<div>
-							101
-						</div>
-						<div>
-							<img src="../img/cama.png" alt="" id="estilos">
-						</div>
-					</div>			
-				</div>
-				<div>
-					Ocupado
-					<hr>
-					<div class="no-habitacion">
-						<div>
-							101
-						</div>
-						<div>
-							<img src="../img/cama.png" alt="" id="estilos">
-						</div>
-					</div>			
-				</div>
-			</div>
 
-			</div>
+                <div class="grid">
+
+                </div>
 			</div>
 		</div>
+        <?php
+        }
+        ?>
+
 	</div>
 	</div>
 
