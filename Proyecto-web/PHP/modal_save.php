@@ -21,17 +21,17 @@
                         <div class="row">
                             <div class="col">
                                 <label>Nombre</label>
-                                <input type="text" class="form-control" placeholder="First name" name="nombrecliente">
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombrecliente">
                             </div>
 
                             <div class="col">
                                 <label>Apellido</label>
-                                <input type="text" name="apellidocliente" class="form-control" placeholder="Aplleido">
+                                <input type="text" name="apellidocliente" class="form-control" placeholder="Apellido">
                             </div>
 
                             <div class="col">
                                 <label>Identificacon</label>
-                                <input type="text" name="identificacion" class="form-control" placeholder="Identificacion">
+                                <input type="text" name="identificacion" class="form-control" placeholder="Identificación">
                             </div>
 
                             <div class="col">

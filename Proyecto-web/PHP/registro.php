@@ -168,9 +168,11 @@
 
                 <!-- Boton que inica el modal para guardar datos -->
                 
-                <h1 style="margin-left: 22px;"> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
+                <h1 class="TituluReserva" style="margin-left: 22px;"> Reservas
+                    <button type="button" class="ButtonSave" data-bs-toggle="modal" data-bs-target="#modalsave">
                         Guardar
-                    </button></h1>
+                    </button>
+                </h1>
 
                 <!-- Aqui comienza la tabla de reservas para con los registros -->
 
@@ -194,9 +196,9 @@
                     include ("conexion.php");
 
                     $ConsultaParaReservas = "SELECT 
-                                            clientes.Nombre,clientes.Apellidos,
+                                            clientes.Nombre,clientes.Apellidos,clientes.idClientes,
                                             habitacion.idHabitacion,habitacion.Piso,habitacion.NombreHab,
-                                            formapago.NombrePago,
+                                            formapago.NombrePago,formapago.idPago,
                                             reservas.FechadeAlta,reservas.idReserva
                                             FROM reservas 
                                             INNER JOIN clientes ON clientes.idClientes = reservas.clientes_idClientes
@@ -208,9 +210,6 @@
                     while ($MostrarReservas = mysqli_fetch_assoc($ResultadosParaReservas)) {
 
                     ?>
-
-                    <!-- Debibo a la repetición de los WHILE y los datos Erroneos mostrados opto por hacer cada
-                    WHILE dentro de su casilla de forma individual -->
 
                     <tbody>
 
@@ -224,23 +223,32 @@
                             <td> <?php echo $MostrarReservas['FechadeAlta']; ?> </td>
                             <td>
 
-                                <button type="button" class="buttondelete" data-bs-toggle="modal" data-bs-target="#ModalDeleteReservas">
-                                    Borrar
+                                <button type="button" class="buttondelete" data-bs-toggle="modal"
+                                        data-bs-target="#deleteReserva<?php echo $MostrarReservas['idReserva']; ?>">
+
+                                        Eliminar
+
                                 </button>
 
                             </td>
+
+                            <?php
+                            include ("DeleteReservas.php");
+                            ?>
+
 
                         </tr>
 
                     <?php
                     }
                     include ("modal_save.php");
-                    include ("DeleteReservas.php");
-
                     ?>
 
                     </tbody>
                 </table>
+
+
+
 
             </div>
 

@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="exampleInputEmail1">Estado</label>
-                            <input type="text" class="form-control" name="estado" value="<?php echo $mostrar['Estado'];?>" required="true">
+                            <input type="text" class="form-control" name="estado" value="<?php echo $mostrar['Estado'];?>" required="true" readonly>
                         </div>
                         <div class="col">
                             <label for="exampleInputEmail1">Piso</label>

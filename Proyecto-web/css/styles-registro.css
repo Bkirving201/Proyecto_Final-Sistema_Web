@@ -46,6 +46,8 @@ body{
 	background-position: 0;
 }
 
+/*#182F53
+
 /*Fin - Barra de navegacion */
 
 /*Cuerpo */
@@ -187,6 +189,35 @@ table,tr,th{
 }
 tbody{
 	border-top: 0px solid currentColor;
+}
+
+
+.ButtonSave{
+
+	width: 85px;
+	height: 37px;
+	/* margin: 10px 0 10px 0; */
+	color: #ffffff;
+	font-weight: bold;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	outline: 0;
+	background-color: #2d4e83;
+	align-content: center;
+}
+
+.ButtonSave:hover{
+	background-color:#629ACF;
+}
+
+.TituluReserva{
+	font-size: 165%;
 }
 
 @media (min-width:1481px) {

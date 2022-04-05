@@ -9,8 +9,10 @@
             <form action="deteleclientes.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $mostrar['idClientes'];?>">
                     <div class="modal-body">
+
                         <label for="exampleInputEmail1">Desea eliminar a </label>
                         <?php echo $mostrar['Nombre']; ?>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cerrar </button>

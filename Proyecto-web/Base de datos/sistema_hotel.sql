@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2022 a las 09:09:20
+-- Tiempo de generación: 05-04-2022 a las 23:12:12
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -42,9 +42,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`idClientes`, `Nombre`, `Apellidos`, `Telefono`, `Identificacion`, `Correo`, `Fechadeingreso`) VALUES
-(27, 'Saul', 'Ramirez', '7443835662', 'Credencial ', 'irvingramirez772@gmail.com', '2022-04-03 23:36:17'),
-(28, 'Kevin', 'Perez', '655120', 'Carnet', 'juanperez@gmail.com', '2022-04-03 23:38:07'),
-(29, 'Pedro', 'velaz', '9888777', 'Visa', 'Pancho@gmail.com', '2022-04-03 23:41:18');
+(31, 'Irving', 'Ramirez', '7443835662', 'Credencial ', 'irvingramirez772@gmail.com', '2022-04-05 14:52:03');
 
 -- --------------------------------------------------------
 
@@ -60,13 +58,6 @@ CREATE TABLE `credito` (
   `Caduca` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `credito`
---
-
-INSERT INTO `credito` (`idTarjeta`, `Propietario`, `Num_Tarjeta`, `CVV`, `Caduca`) VALUES
-(3, 'Juan Perez', '123456789', '123', '01/24');
-
 -- --------------------------------------------------------
 
 --
@@ -80,13 +71,6 @@ CREATE TABLE `debito` (
   `CVV` varchar(45) NOT NULL,
   `Caduca` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `debito`
---
-
-INSERT INTO `debito` (`idTarjeta`, `Propietario`, `Num_Tarjeta`, `CVV`, `Caduca`) VALUES
-(3, 'Juancho', '987654321', '321', '02/25');
 
 -- --------------------------------------------------------
 
@@ -106,7 +90,7 @@ CREATE TABLE `efectivo` (
 --
 
 INSERT INTO `efectivo` (`idEfectivo`, `Nombre`, `Monto`, `Fecha`) VALUES
-(18, 'Irving', '1300', '2022-04-03');
+(20, 'Irving', '1300', '2022-04-05');
 
 -- --------------------------------------------------------
 
@@ -127,9 +111,7 @@ CREATE TABLE `formapago` (
 --
 
 INSERT INTO `formapago` (`idPago`, `NombrePago`, `credito_idTarjeta`, `debito_idTarjeta`, `efectivo_idEfectivo`) VALUES
-(13, 'Efectivo', NULL, NULL, 18),
-(14, 'Tarjeta de Credito', 3, NULL, NULL),
-(15, 'Tarjeta de Debito', NULL, 3, NULL);
+(17, 'Efectivo', NULL, NULL, 20);
 
 -- --------------------------------------------------------
 
@@ -151,11 +133,11 @@ CREATE TABLE `habitacion` (
 --
 
 INSERT INTO `habitacion` (`idHabitacion`, `NombreHab`, `Descripcion`, `Precio`, `Piso`, `Estado`) VALUES
-(1, 'Habitacion Chica', 'Cama individual, baño, sala tamaño de 18 m2', 800, 3, 'Ocupada'),
-(2, 'Habitacion Suite', 'Cama Queen Size, Jacuzzi, Gym incorporado,Comedor', 2500, 7, 'Ocupada'),
-(3, 'Habitacion Grande', 'Cama Matrimonial, Baño, television, aire, terraza', 1300, 1, 'Disponible'),
+(1, 'Habitacion Chica', 'Cama individual, baño, sala tamaño de 18 m2', 800, 3, 'Disponible'),
+(2, 'Habitacion Suite', 'Cama Queen Size, Jacuzzi, Gym incorporado,Comedor', 2500, 7, 'Disponible'),
+(3, 'Habitacion Grande', 'Cama Matrimonial, Baño, television, aire, terraza', 1300, 1, 'Ocupada'),
 (4, 'Habitacion Grande', 'Cama doble,Baño,Comedor,Armario pequeño', 1400, 3, 'Disponible'),
-(5, 'Habitacion Mediana', 'Cama Individual,Armario pequeño,terraza,baño,sala,', 900, 2, 'Ocupada');
+(5, 'Habitacion Mediana', 'Cama Individual,Armario pequeño,terraza,baño,sala,', 900, 2, 'Disponible');
 
 -- --------------------------------------------------------
 
@@ -176,9 +158,7 @@ CREATE TABLE `reservas` (
 --
 
 INSERT INTO `reservas` (`idReserva`, `clientes_idClientes`, `habitacion_idHabitacion`, `formaPago_idPago`, `FechadeAlta`) VALUES
-(4, 27, 2, 13, '2022-04-03 23:36:17'),
-(5, 28, 1, 14, '2022-04-03 23:38:07'),
-(6, 29, 5, 15, '2022-04-03 23:41:18');
+(8, 31, 3, 17, '2022-04-05 14:52:03');
 
 --
 -- Índices para tablas volcadas
@@ -240,7 +220,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `credito`
@@ -258,13 +238,13 @@ ALTER TABLE `debito`
 -- AUTO_INCREMENT de la tabla `efectivo`
 --
 ALTER TABLE `efectivo`
-  MODIFY `idEfectivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idEfectivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `formapago`
 --
 ALTER TABLE `formapago`
-  MODIFY `idPago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idPago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `habitacion`
@@ -276,7 +256,7 @@ ALTER TABLE `habitacion`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
