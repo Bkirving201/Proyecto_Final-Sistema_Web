@@ -50,10 +50,7 @@
 			<div id="contenido-cuerpo">
 				<!--Cuadro branco -->
 
-
-				<h1 style="text-align: center;">Datos registrados </h1>
-				<br>
-                <h2 id="titulo"> Clientes </h2>
+                <h2 align="Center" id="titulo"> Clientes </h2>
                 <hr style="margin-left: 30px; margin-right: 30px;">
 
                 <!-- Tabla de boostrap 5 -->

@@ -168,6 +168,29 @@ th{
 	background-color: #00C700;
 }
 
+.buttondelete{
+	width: 85px;
+	height: 37px;
+	/* margin: 10px 0 10px 0; */
+	color: #ffffff;
+	font-weight: bold;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	outline: 0;
+	background-color: #D40000;
+	align-content: center;
+}
+
+.buttondelete:hover{
+	background-color: #FB0000;
+}
+
 /*============ Inicio - Cuerpo Registro - Oculto ================*/
 
 

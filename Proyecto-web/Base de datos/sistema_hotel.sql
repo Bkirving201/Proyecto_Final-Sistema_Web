@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-03-2022 a las 07:49:22
+-- Tiempo de generación: 05-04-2022 a las 09:09:20
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -42,7 +42,9 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`idClientes`, `Nombre`, `Apellidos`, `Telefono`, `Identificacion`, `Correo`, `Fechadeingreso`) VALUES
-(3, 'Jose Luis', 'Vargas', '7443355221', 'Visa', 'joseluis12@gmail.com', '2022-03-28 23:19:01');
+(27, 'Saul', 'Ramirez', '7443835662', 'Credencial ', 'irvingramirez772@gmail.com', '2022-04-03 23:36:17'),
+(28, 'Kevin', 'Perez', '655120', 'Carnet', 'juanperez@gmail.com', '2022-04-03 23:38:07'),
+(29, 'Pedro', 'velaz', '9888777', 'Visa', 'Pancho@gmail.com', '2022-04-03 23:41:18');
 
 -- --------------------------------------------------------
 
@@ -53,10 +55,17 @@ INSERT INTO `clientes` (`idClientes`, `Nombre`, `Apellidos`, `Telefono`, `Identi
 CREATE TABLE `credito` (
   `idTarjeta` int(11) NOT NULL,
   `Propietario` varchar(45) NOT NULL,
-  `Num.Tarjeta` varchar(25) NOT NULL,
+  `Num_Tarjeta` varchar(25) NOT NULL,
   `CVV` varchar(10) NOT NULL,
   `Caduca` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `credito`
+--
+
+INSERT INTO `credito` (`idTarjeta`, `Propietario`, `Num_Tarjeta`, `CVV`, `Caduca`) VALUES
+(3, 'Juan Perez', '123456789', '123', '01/24');
 
 -- --------------------------------------------------------
 
@@ -67,10 +76,17 @@ CREATE TABLE `credito` (
 CREATE TABLE `debito` (
   `idTarjeta` int(11) NOT NULL,
   `Propietario` varchar(45) NOT NULL,
-  `Num.Tarjeta` varchar(45) NOT NULL,
+  `Num_Tarjeta` varchar(45) NOT NULL,
   `CVV` varchar(45) NOT NULL,
   `Caduca` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `debito`
+--
+
+INSERT INTO `debito` (`idTarjeta`, `Propietario`, `Num_Tarjeta`, `CVV`, `Caduca`) VALUES
+(3, 'Juancho', '987654321', '321', '02/25');
 
 -- --------------------------------------------------------
 
@@ -85,6 +101,13 @@ CREATE TABLE `efectivo` (
   `Fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `efectivo`
+--
+
+INSERT INTO `efectivo` (`idEfectivo`, `Nombre`, `Monto`, `Fecha`) VALUES
+(18, 'Irving', '1300', '2022-04-03');
+
 -- --------------------------------------------------------
 
 --
@@ -93,11 +116,20 @@ CREATE TABLE `efectivo` (
 
 CREATE TABLE `formapago` (
   `idPago` int(11) NOT NULL,
-  `Nombre` int(11) NOT NULL,
-  `Credito_idTarjeta` int(11) NOT NULL,
-  `Debito_idTarjeta` int(11) NOT NULL,
-  `Efectivo_idEfectivo` int(11) NOT NULL
+  `NombrePago` varchar(20) NOT NULL,
+  `credito_idTarjeta` int(11) DEFAULT NULL,
+  `debito_idTarjeta` int(11) DEFAULT NULL,
+  `efectivo_idEfectivo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `formapago`
+--
+
+INSERT INTO `formapago` (`idPago`, `NombrePago`, `credito_idTarjeta`, `debito_idTarjeta`, `efectivo_idEfectivo`) VALUES
+(13, 'Efectivo', NULL, NULL, 18),
+(14, 'Tarjeta de Credito', 3, NULL, NULL),
+(15, 'Tarjeta de Debito', NULL, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -119,11 +151,11 @@ CREATE TABLE `habitacion` (
 --
 
 INSERT INTO `habitacion` (`idHabitacion`, `NombreHab`, `Descripcion`, `Precio`, `Piso`, `Estado`) VALUES
-(1, 'Habitacion Chica', 'Cama individual, baño, sala tamaño de 18 m2', 900, 3, 'Disponible'),
+(1, 'Habitacion Chica', 'Cama individual, baño, sala tamaño de 18 m2', 800, 3, 'Ocupada'),
 (2, 'Habitacion Suite', 'Cama Queen Size, Jacuzzi, Gym incorporado,Comedor', 2500, 7, 'Ocupada'),
 (3, 'Habitacion Grande', 'Cama Matrimonial, Baño, television, aire, terraza', 1300, 1, 'Disponible'),
 (4, 'Habitacion Grande', 'Cama doble,Baño,Comedor,Armario pequeño', 1400, 3, 'Disponible'),
-(5, 'Habitacion Mediana', 'Cama Individual,Armario pequeño,terraza,baño,sala,', 900, 2, 'Disponible');
+(5, 'Habitacion Mediana', 'Cama Individual,Armario pequeño,terraza,baño,sala,', 900, 2, 'Ocupada');
 
 -- --------------------------------------------------------
 
@@ -133,12 +165,20 @@ INSERT INTO `habitacion` (`idHabitacion`, `NombreHab`, `Descripcion`, `Precio`, 
 
 CREATE TABLE `reservas` (
   `idReserva` int(11) NOT NULL,
-  `Clientes_idClientes` int(11) NOT NULL,
-  `Habitacion_idHabitacion` int(11) NOT NULL,
-  `FormaPago_idPago` int(11) NOT NULL,
-  `FechadeAlta` datetime NOT NULL,
-  `Estado` varchar(45) NOT NULL
+  `clientes_idClientes` int(11) NOT NULL,
+  `habitacion_idHabitacion` int(11) NOT NULL,
+  `formaPago_idPago` int(11) NOT NULL,
+  `FechadeAlta` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`idReserva`, `clientes_idClientes`, `habitacion_idHabitacion`, `formaPago_idPago`, `FechadeAlta`) VALUES
+(4, 27, 2, 13, '2022-04-03 23:36:17'),
+(5, 28, 1, 14, '2022-04-03 23:38:07'),
+(6, 29, 5, 15, '2022-04-03 23:41:18');
 
 --
 -- Índices para tablas volcadas
@@ -173,9 +213,9 @@ ALTER TABLE `efectivo`
 --
 ALTER TABLE `formapago`
   ADD PRIMARY KEY (`idPago`),
-  ADD KEY `Credito_idTarjeta` (`Credito_idTarjeta`),
-  ADD KEY `Debito_idTarjeta` (`Debito_idTarjeta`),
-  ADD KEY `Efectivo_idEfectivo` (`Efectivo_idEfectivo`);
+  ADD KEY `Credito_idTarjeta` (`credito_idTarjeta`),
+  ADD KEY `Debito_idTarjeta` (`debito_idTarjeta`),
+  ADD KEY `Efectivo_idEfectivo` (`efectivo_idEfectivo`);
 
 --
 -- Indices de la tabla `habitacion`
@@ -188,9 +228,9 @@ ALTER TABLE `habitacion`
 --
 ALTER TABLE `reservas`
   ADD PRIMARY KEY (`idReserva`),
-  ADD KEY `Clientes_idClientes` (`Clientes_idClientes`),
-  ADD KEY `Habitacion_idHabitacion` (`Habitacion_idHabitacion`),
-  ADD KEY `FormaPago_idPago` (`FormaPago_idPago`);
+  ADD KEY `Clientes_idClientes` (`clientes_idClientes`),
+  ADD KEY `Habitacion_idHabitacion` (`habitacion_idHabitacion`),
+  ADD KEY `FormaPago_idPago` (`formaPago_idPago`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -200,31 +240,31 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idClientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `credito`
 --
 ALTER TABLE `credito`
-  MODIFY `idTarjeta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTarjeta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `debito`
 --
 ALTER TABLE `debito`
-  MODIFY `idTarjeta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTarjeta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `efectivo`
 --
 ALTER TABLE `efectivo`
-  MODIFY `idEfectivo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEfectivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `formapago`
 --
 ALTER TABLE `formapago`
-  MODIFY `idPago` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `habitacion`
@@ -236,7 +276,7 @@ ALTER TABLE `habitacion`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
@@ -246,9 +286,9 @@ ALTER TABLE `reservas`
 -- Filtros para la tabla `formapago`
 --
 ALTER TABLE `formapago`
-  ADD CONSTRAINT `formapago_ibfk_1` FOREIGN KEY (`Credito_idTarjeta`) REFERENCES `credito` (`idTarjeta`),
-  ADD CONSTRAINT `formapago_ibfk_2` FOREIGN KEY (`Debito_idTarjeta`) REFERENCES `debito` (`idTarjeta`),
-  ADD CONSTRAINT `formapago_ibfk_3` FOREIGN KEY (`Efectivo_idEfectivo`) REFERENCES `efectivo` (`idEfectivo`);
+  ADD CONSTRAINT `formapago_ibfk_1` FOREIGN KEY (`credito_idTarjeta`) REFERENCES `credito` (`idTarjeta`),
+  ADD CONSTRAINT `formapago_ibfk_2` FOREIGN KEY (`debito_idTarjeta`) REFERENCES `debito` (`idTarjeta`),
+  ADD CONSTRAINT `formapago_ibfk_3` FOREIGN KEY (`efectivo_idEfectivo`) REFERENCES `efectivo` (`idEfectivo`);
 
 --
 -- Filtros para la tabla `reservas`
