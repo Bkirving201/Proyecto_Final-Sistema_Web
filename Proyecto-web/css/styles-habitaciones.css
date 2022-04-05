@@ -1,14 +1,5 @@
 body{
     margin: 0;
-	font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-
 }
 #general{
 	display: flex;
@@ -41,6 +32,8 @@ body{
 	margin-bottom:14px;
 }
 
+/*Inicio - Animacion botones*/
+
 .animacion-btn {
 	border-color:  #FFA100;
 	color: black;
@@ -54,6 +47,9 @@ body{
 .animacion-btn:hover {
 	background-position: 0;
 }
+
+/* Fin - Barra de navegacion*/
+
 /* Cuerpo*/
 
 #cuerpo{
@@ -68,30 +64,37 @@ body{
 	height: 600px;
 	width: 1065px;
 	margin: auto;
-	margin-top: -10px;
+	margin-top: 10px;
 }
 #hbt{
 	border: 2px solid #e2e2e2;
 	margin-top: 60px;
-	margin-left: 44px;
+	margin-left: 19px;
 	margin-bottom: 20px;
 	padding-bottom: 80px;
 }
 .tarjetas{
 	display: flex;
+	margin-left: -21px;
 	justify-content: center;
 }
 #contenido-tarjetas{
 	text-align: center;
 }
-
+h3{
+	margin-top: 15px;
+	margin-bottom: 27px;
+	font-size: 21px;
+}
 #btn-tarjetas{
-	margin-left: 44px;
 	padding: 14px 59px 14px 59px;
 	background-color: #182F53;
 	color: white;
 }
-
+a{
+	display: flex;
+	justify-content: center;
+}
 @media (min-width:1481px) {
 
 	#cuerpo {

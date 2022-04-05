@@ -2,19 +2,13 @@
 <html>
 
 <head>
-	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="..\css\styles.css"> <!-- Conexion HTML con CSS -->
-	<link rel="icon" href="img/img2">
-	<title>Sistema hotelero (beta 1)</title>
+	<link rel="icon" href="../img/img2.png"> <!-- Iconco -->
+	<title>Sistema hotelero</title>
 </head>
 
 <body>
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-	<script src="../js/galeria.js"></script>
-
 	<div id="general">
 
 		<!-- aqui comienza la Barra de navegacion lateral -->
@@ -22,11 +16,11 @@
 
 			<div id="navegacion-alineacion">
 
-				<img src="..\img\img2.png" id="img2"> <!-- logo -->
+				<img src="..\img\img2.png" id="img2"> <!-- logo	del sistema -->
 
 
 				<a href="index.php">
-					<button class="animacion-btn" id="boton">Inicio</button>
+					<button class="animacion-btn" id="boton">Inicio</button> <!-- Btn-lateral-Inicio -->
 				</a>
 
 				<a href="habitaciones.php">
@@ -37,33 +31,69 @@
 				</a>
 
                 <a href="registro.php">
-                    <button class="animacion-btn" id="boton">Registro</button>
+                    <button class="animacion-btn" id="boton">Registro</button><!-- Btn-lateral-Registro-->
                 </a>
             </div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
 
-        <?php
-        include ("conexion.php");
-        $consulta="SELECT * FROM habitacion";
-        $resultados=mysqli_query($enlace,$consulta);
-
-        while ($mostrar=mysqli_fetch_array($resultados)); {
-
-        ?>
-
+		<!-- Aqui comienza el cuerpo del sistema-->
 		<div id="cuerpo">
-			<div id="contenido-cuerpo">
-
-                <div class="grid">
-
-                </div>
+			<div id="contenido-cuerpo" > <!--Inicio-Cuadro branco -->
+			
+			<div class="encabezado">
+				Servicos:
+				<hr>
 			</div>
-		</div>
-        <?php
-        }
-        ?>
-
+			<div class="grid">
+				<div>
+					<img src="../img/reservaciones.jpg" height="172px;" alt="">
+				</div>
+				<div>
+					<img src="../img/pago.jpg" height="172px;" alt="">
+				</div>
+				<div>
+					<img src="../img/cama.png" height="172px;" alt="">
+				</div>
+				<div>
+					Reservaciones
+				</div>
+				<div>
+					Metodos de pago
+				</div>
+				<div>
+					Variedad de Habitaciones
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="encabezado">
+				Servicos de entretenimiento:
+				<hr>
+			</div>
+			<div class="grid2">
+				<div>
+					<img src="../img/playa.jpg" height="172px;" alt="">
+				</div>
+				<div>
+					<img src="../img/naturaleza.jpg" height="172px;" alt="">
+				</div>
+				<div>
+					<img src="../img/tou.jpg" height="172px;" alt="">
+				</div>
+				<div>
+					Playas
+				</div>
+				<div>
+					Naturaleza
+				</div>
+				<div>
+					Tours
+				</div>
+			</div>
+		
+			</div> <!--Fin-Cuadro branco -->
+		</div> <!-- Aqui termina el cuerpo del sistema -->
 	</div>
 	</div>
 

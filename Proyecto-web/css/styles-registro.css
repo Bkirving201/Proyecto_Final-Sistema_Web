@@ -4,7 +4,8 @@ body{
 #general{
 	display: flex;
 }
-/*============ Inicio - Barra de navegacion ================*/
+
+/*	Barra de navegacion*/
 
 #navegacion{
 
@@ -29,7 +30,9 @@ body{
 	margin-bottom:20px;
 }
 
-.animacion-btn { /*Animacion para todos los botones*/
+/*Inicio - Animacion botones*/
+
+.animacion-btn {
 	border-color:  #FFA100;
 	color: black;
 	background-image: -webkit-linear-gradient(45deg,  #FFA100 50%, transparent 50%);
@@ -39,14 +42,13 @@ body{
 	-webkit-transition: background 300ms ease-in-out;
 	transition: background 300ms ease-in-out;
 }
-.animacion-btn:hover { /*Animacion para todos los botones*/
+.animacion-btn:hover {
 	background-position: 0;
 }
 
-/*============ Fin - Barra de navegacion ================*/
+/*Fin - Barra de navegacion */
 
-
-/*============ Inicio - Cuerpo Registro ================*/
+/*Cuerpo */
 
 #cuerpo{
 	background-color: #FFA100;
@@ -83,20 +85,13 @@ margin-right: 55px;
 	font-size: 87%;	
 }
 table,tr,th{
-
-
 	text-align: center;
 	font-weight: normal;
 }
-th{
-	padding-left: 18px;
-	padding-right: 18px;
-}
 
  .encabezado{
-	 
-	 color: white;
-	 background-color: #2d4e83;
+	color: white;
+	background-color: #2d4e83;
  }
 
 #tabla{
@@ -145,7 +140,7 @@ th{
 	margin-right: 23px;
 }
 
-.buttonedit{
+.buttonedit{ /*Boton - Guardar - Editar*/
 	width: 85px;
 	height: 37px;
 	/* margin: 10px 0 10px 0; */
@@ -168,7 +163,7 @@ th{
 	background-color: #00C700;
 }
 
-.buttondelete{
+.buttondelete{ /*Boton - Eliminar*/
 	width: 85px;
 	height: 37px;
 	/* margin: 10px 0 10px 0; */
@@ -190,9 +185,9 @@ th{
 .buttondelete:hover{
 	background-color: #FB0000;
 }
-
-/*============ Inicio - Cuerpo Registro - Oculto ================*/
-
+tbody{
+	border-top: 0px solid currentColor;
+}
 
 @media (min-width:1481px) {
 

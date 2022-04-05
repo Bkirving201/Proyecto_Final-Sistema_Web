@@ -1,15 +1,6 @@
 
 body{
     margin: 0;
-	font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-
 }
 #general{
 	display: flex;
@@ -44,6 +35,8 @@ body{
 	margin-bottom:14px;
 }
 
+/*Inicio - Animacion botones*/
+
 .animacion-btn {
 	border-color:  #FFA100;
 	color: black;
@@ -58,6 +51,7 @@ body{
 	background-position: 0;
 }
 
+/* Fin - Barra de navegacion*/
 
 /* Cuerpo*/
 
@@ -69,41 +63,51 @@ body{
 }
 
 #contenido-cuerpo{
+	color: white;
 	background-color: white;
+	background: url(../img/hotel61.jpg);
+	background-size:1064px;
 	height: 601px;
 	width: 1065px;
 	margin: auto;
 	margin-top: 10px;
 	padding-top: 30px;
 }
-
 .grid{
-	margin-left: 20px;
-	margin-right: 53px;
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: auto;
-	gap:79px;
-	column-gap: 12px;
+	grid-template-columns: 33% 33% 33%;
+
 }
 .grid div{
-	
-	text-align: center;
-	color: #fff;
-	background-color: #4ea93b;
-	height: 100px;
-	border-radius: 2%;
+	color: white;
+	margin: auto;
+	margin-bottom: 2px;
+}
+.grid img{
+	border-radius: 4%;
+	margin: auto;
 }
 
-.no-habitacion{
-	display: flex;
-	flex-direction: column;
-}
-#estilos{
-	height: 100px;
+.encabezado{
+	margin-left: 20px;
+	font-size: 19px;
+	margin-right: 24px;
 }
 
+.grid2{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
 
+}
+.grid2 div{
+	color: white;
+	margin: auto;
+	margin-bottom: 2px;
+}
+.grid2 img{
+	border-radius: 4%;
+	margin: auto;
+}
 @media (min-width:1481px) {
 
 	#cuerpo {

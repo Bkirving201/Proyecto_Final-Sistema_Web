@@ -2,26 +2,21 @@
 <html>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  <!--Conexion-bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  <!--Conexion-bootstrap-->
     <link rel="stylesheet" type="text/css" href="../css/styles-registro.css"> <!-- Conexion HTML con CSS -->
-	<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- google fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- google fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> <!-- titulo fuente -->
-	<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet"> <!-- fuente general-->
-	<title>Sistema hotelero (beta 1)</title>
+	<link rel="icon" href="../img/img2.png"> <!-- Iconco -->
+	<title>Sistema hotelero</title>
 </head>
 
 <body>
 	<div id="general">
-
 		<!-- aqui comienza la Barra de navegacion lateral -->
 		<div id="navegacion">
 
 			<div id="navegacion-alineacion">
 
-				<img src="..\img\img2.png" id="img1"> <!-- logo -->
+				<img src="..\img\img2.png" id="img1">  <!-- logo	del sistema -->
 				<a href="index.php">
 					<button class="animacion-btn" id="btn">Inicio</button> <!-- Btn-lateral-inicio-->
 				</a>
@@ -33,7 +28,7 @@
 				</a>
 
                 <a href="registro.php?pagina=1">
-                    <button class="animacion-btn" id="btn" > Registro </button>
+                    <button class="animacion-btn" id="btn" > Registro </button><!-- Btn-lateral-Registro-->
                 </a>
 
 			</div>
@@ -42,8 +37,7 @@
 
 		<!-- aqui comienza La estructura del cuerpo -->
 		<div id="cuerpo">
-			<div id="contenido-cuerpo">
-				<!--Cuadro branco -->
+			<div id="contenido-cuerpo"> <!--Cuadro branco -->
 
                 <h2 style="text-align: center;"> Habitaciones </h2>
 
@@ -174,7 +168,7 @@
 
                 <!-- Boton que inica el modal para guardar datos -->
                 
-                <h1> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
+                <h1 style="margin-left: 22px;"> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
                         Guardar
                     </button></h1>
 
