@@ -120,6 +120,9 @@
 
                 <!-- Final de la tabla para mostrar los datos -->
 
+
+
+
                         <!-- Aqui comienza la paginación para la tabla -->
 
                         <nav class="alineacion" aria-label="Page navigation example">
@@ -137,7 +140,7 @@
                                 </li>
 
 
-                                <!-- For para mostrar el numero de paginas necsarias -->
+                                <!-- For para mostrar el numero de paginas necesarias -->
 
                                 <?php for($i=0;$i<$paginas;$i++): ?>
 
@@ -164,24 +167,16 @@
 
                         </nav>
 
-                <h1> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
-                        Guardar
-                    </button></h1>
 
                 <!-- aqui acaba la paginacion de la pagina para mostrar los datos por cantidad -->
 
-                <!-- Consultas para los datos de reservas -->
-
-                <?php
-                include ("conexion.php");
-                $consulta_2 = "SELECT * FROM reservas";
-                $resultado_2 = mysqli_query($enlace,$consulta_2);
-
-                while ($mostrar_1=mysqli_fetch_array($resultado_2));{
 
 
-                ?>
-
+                <!-- Boton que inica el modal para guardar datos -->
+                
+                <h1> Reservas <button type="button" class="buttonedit" data-bs-toggle="modal" data-bs-target="#modalsave">
+                        Guardar
+                    </button></h1>
 
                 <!-- Aqui comienza la tabla de reservas para con los registros -->
 
@@ -190,7 +185,7 @@
                     <tr class="tittletables">
 
                         <th scope="col">Nombre del cliente</th>
-                        <th scope="col">Num. habitación</th>
+                        <th scope="col">Num. hab</th>
                         <th scope="col">Tipo Hab.</th>
                         <th scope="col">Piso</th>
                         <th scope="col">Forma de pago</th>
@@ -199,32 +194,59 @@
 
                     </tr>
                     </thead>
+                    <!-- Consultas para los datos de reservas -->
+
+                    <?php
+                    include ("conexion.php");
+
+                    $ConsultaParaReservas = "SELECT 
+                                            clientes.Nombre,clientes.Apellidos,
+                                            habitacion.idHabitacion,habitacion.Piso,habitacion.NombreHab,
+                                            formapago.NombrePago,
+                                            reservas.FechadeAlta,reservas.idReserva
+                                            FROM reservas 
+                                            INNER JOIN clientes ON clientes.idClientes = reservas.clientes_idClientes
+                                            INNER JOIN habitacion ON reservas.habitacion_idHabitacion = habitacion.idHabitacion
+                                            INNER JOIN formapago ON formapago.idPago = reservas.formapago_idPago";
+
+                    $ResultadosParaReservas = mysqli_query($enlace,$ConsultaParaReservas);
+
+                    while ($MostrarReservas = mysqli_fetch_assoc($ResultadosParaReservas)) {
+
+                    ?>
+
+                    <!-- Debibo a la repetición de los WHILE y los datos Erroneos mostrados opto por hacer cada
+                    WHILE dentro de su casilla de forma individual -->
+
                     <tbody>
+
                         <tr>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
+
+                            <td> <?php echo $MostrarReservas['Nombre']; ?> <?php echo $MostrarReservas['Apellidos']; ?> </td>
+                            <td> <?php echo $MostrarReservas['idHabitacion']; ?>  </td>
+                            <td> <?php echo $MostrarReservas['NombreHab']; ?> </td>
+                            <td> <?php echo $MostrarReservas['Piso']; ?> </td>
+                            <td> <?php echo $MostrarReservas['NombrePago']; ?> </td>
+                            <td> <?php echo $MostrarReservas['FechadeAlta']; ?> </td>
                             <td>
-                                <button>Editar</button>
-                                <button>Borrar</button>
+
+                                <button type="button" class="buttondelete" data-bs-toggle="modal" data-bs-target="#ModalDeleteReservas">
+                                    Borrar
+                                </button>
+
                             </td>
 
                         </tr>
 
                     <?php
-                    include ("modal_save.php");
                     }
+                    include ("modal_save.php");
+                    include ("DeleteReservas.php");
+
                     ?>
 
                     </tbody>
                 </table>
-
-
-
-
 
             </div>
 
