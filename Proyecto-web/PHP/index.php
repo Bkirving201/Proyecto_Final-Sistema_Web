@@ -30,69 +30,71 @@
 					<button class="animacion-btn" id="boton">Datos registrados</button> <!-- Btn-lateral-Regristo -->
 				</a>
 
-                <a href="registro.php">
-                    <button class="animacion-btn" id="boton">Registro</button><!-- Btn-lateral-Registro-->
-                </a>
-            </div>
+				<a href="registro.php">
+					<button class="animacion-btn" id="boton">Registro</button><!-- Btn-lateral-Registro-->
+				</a>
+			</div>
 		</div>
 		<!-- aqui termina la Barra de navegacion lateral -->
 
 		<!-- Aqui comienza el cuerpo del sistema-->
 		<div id="cuerpo">
-			<div id="contenido-cuerpo" > <!--Inicio-Cuadro branco -->
-			
-			<div class="encabezado">
-				Servicos:
-				<hr>
+			<div id="contenido-cuerpo">
+				<!--Inicio-Cuadro blanco -->
+
+				<div class="encabezado">
+					Servicos:
+					<hr>
+				</div>
+				<div class="grid">
+					<div>
+						<img src="../img/reservaciones.jpg" height="172px;" alt="">
+					</div>
+					<div>
+						<img src="../img/pago.jpg" height="172px;" alt="">
+					</div>
+					<div>
+						<img src="../img/cama.png" height="172px;" alt="">
+					</div>
+					<div>
+						Reservaciones
+					</div>
+					<div>
+						Métodos de pago
+					</div>
+					<div>
+						Variedad de Habitaciones
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="encabezado">
+					Servicos de entretenimiento:
+					<hr>
+				</div>
+				<div class="grid2">
+					<div>
+						<img src="../img/playa.jpg" height="172px;" alt="">
+					</div>
+					<div>
+						<img src="../img/naturaleza.jpg" height="172px;" alt="">
+					</div>
+					<div>
+						<img src="../img/tou.jpg" height="172px;" alt="">
+					</div>
+					<div>
+						Playas
+					</div>
+					<div>
+						Naturaleza
+					</div>
+					<div>
+						Tours
+					</div>
+				</div>
+
 			</div>
-			<div class="grid">
-				<div>
-					<img src="../img/reservaciones.jpg" height="172px;" alt="">
-				</div>
-				<div>
-					<img src="../img/pago.jpg" height="172px;" alt="">
-				</div>
-				<div>
-					<img src="../img/cama.png" height="172px;" alt="">
-				</div>
-				<div>
-					Reservaciones
-				</div>
-				<div>
-					Metodos de pago
-				</div>
-				<div>
-					Variedad de Habitaciones
-				</div>
-			</div>
-			<br>
-			<br>
-			<div class="encabezado">
-				Servicos de entretenimiento:
-				<hr>
-			</div>
-			<div class="grid2">
-				<div>
-					<img src="../img/playa.jpg" height="172px;" alt="">
-				</div>
-				<div>
-					<img src="../img/naturaleza.jpg" height="172px;" alt="">
-				</div>
-				<div>
-					<img src="../img/tou.jpg" height="172px;" alt="">
-				</div>
-				<div>
-					Playas
-				</div>
-				<div>
-					Naturaleza
-				</div>
-				<div>
-					Tours
-				</div>
-			</div>
-		
-			</div> <!--Fin-Cuadro branco -->
+			<!--Fin-Cuadro blanco -->
 		</div> <!-- Aqui termina el cuerpo del sistema -->
 	</div>
 	</div>

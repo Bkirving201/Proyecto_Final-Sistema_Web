@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	
+
 	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- Conexion HTML con CSS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- google fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- google fonts -->
